@@ -2,8 +2,8 @@
 
 Trabalho desenvolvido na **Residência Tecnológica em Resposta a Incidentes e Forense Computacional**, programa **Hackers do Bem** (RNP / MCTI / Softex / SENAI), junto ao **PoP-BA — Ponto de Presença da RNP na Bahia**.
 
-- **Autor:** Marco Aurelio da Silva da Cruz (Residente Tecnológico)
-- **Mentoria:** César Augusto Hass Loureiro
+- **Autor:** Marco Aurelio Cruz (Residente Tecnológico)
+- **Mentoria:**
 - **Período:** Set/2025 – Fev/2026
 
 ## Contexto
@@ -68,6 +68,4 @@ O PoP-BA é infraestrutura crítica de conectividade: atende 50+ instituições 
 
 Este repositório contém material derivado de um trabalho realizado para uma instituição real. Consulte [`SANITIZACAO.md`](SANITIZACAO.md) antes de qualquer publicação.
 
-## Licença
-
-Defina a licença após autorização da RNP/PoP-BA e do programa Hackers do Bem (sugestão para documentação: CC BY 4.0).
+O relatório técnico final está marcado como **"Documento RESERVADO — uso interno"**.
