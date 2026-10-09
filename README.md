@@ -1,47 +1,73 @@
-# Residência Tecnológica em Resposta a Incidentes de Segurança - PoP-BA / RNP
+# Capacidade de Resposta a Incidentes — PoP-BA/RNP
 
-Este repositório reúne os documentos, playbooks operacionais, planos de contingência e modelos de gestão desenvolvidos durante a Residência Tecnológica do Programa **Hackers do Bem** junto ao **Ponto de Presença da RNP na Bahia (PoP-BA)**.
+Trabalho desenvolvido na **Residência Tecnológica em Resposta a Incidentes e Forense Computacional**, programa **Hackers do Bem** (RNP / MCTI / Softex / SENAI), junto ao **PoP-BA — Ponto de Presença da RNP na Bahia**.
 
----
+- **Autor:** Marco Aurelio da Silva da Cruz (Residente Tecnológico)
+- **Mentoria:** César Augusto Hass Loureiro
+- **Período:** Set/2025 – Fev/2026
 
-## 🗂️ Estrutura do Repositório
+## Contexto
 
-```text
+O PoP-BA é infraestrutura crítica de conectividade: atende 50+ instituições de ensino e pesquisa e cerca de 150 mil usuários finais. Um incidente de rede tem efeito cascata imediato. O objetivo do projeto foi **formalizar e elevar a maturidade da resposta a incidentes**, com processo estruturado, playbooks operacionais e capacitação da equipe.
+
+## Metodologia
+
+1. **Levantamento de dados** — OSINT + entrevista estruturada com gestores (roteiro cobrindo o ciclo de vida do NIST)
+2. **Análise quantitativa** — matriz de risco Probabilidade × Impacto (escala 1–5), com a prioridade do cliente como critério de desempate
+3. **Validação operacional** — playbooks ajustados às capacidades técnicas reais do PoP-BA
+4. **Desenvolvimento iterativo** — playbooks revisados com mentor e equipe
+5. **Entrega normativa** — relatório, plano, playbooks e treinamento
+
+## Entregas
+
+| # | Entrega | Pasta |
+|---|---------|-------|
+| 1 | Relatório de análise inicial (diagnóstico, 9 cenários de risco) | [`docs/relatorio`](docs/relatorio) |
+| 2 | Playbook de **DDoS** | [`playbooks/ddos`](playbooks/ddos) |
+| 3 | Playbook de **Exploração/Varredura** | [`playbooks/exploracao-varredura`](playbooks/exploracao-varredura) |
+| 4 | **Plano formal de resposta a incidentes** | [`plano-resposta-incidentes`](plano-resposta-incidentes) |
+| 5 | **Programa de capacitação** (treinamento da equipe e simulações) | [`treinamento`](treinamento) |
+| — | Templates de comunicação e matriz de risco | [`templates-comunicacao`](templates-comunicacao), [`matriz-risco`](matriz-risco) |
+
+## Priorização de riscos (resumo)
+
+| Ordem | Tipo de incidente | P | I | P×I |
+|-------|-------------------|---|---|-----|
+| 1º | DoS/DDoS | 5 | 3 | 15 |
+| 2º | Exploração / varredura | 5 | 2 | 10 |
+| 3º | Phishing / engenharia social | 2 | 3 | 6 |
+| 4º | Comprometimento de site / aplicação web | 2 | 3 | 6 |
+| 5º | Ransomware | 1 | 5 | 5 |
+
+## Referências normativas
+
+- NIST SP 800-61 Rev. 3
+- ISO/IEC 27035-1:2023
+- LGPD — Lei nº 13.709/2018
+- MITRE ATT&CK
+- ISO 31000 (gestão de riscos)
+
+## Estrutura do repositório
+
+```
 .
-├── README.md
 ├── docs/
-│   ├── relatorios/
-│   │   ├── Relatorio_FINAL_Marco_Aurelio_Cruz.pdf
-│   │   └── Apresentacao_Banca.pdf
-│   ├── planos/
-│   │   └── Plano_de_Resposta_a_Incidentes.md
-│   └── treinamento/
-│       └── Treinamento_Equipe_PoP-BA.pdf
+│   ├── relatorio/          # Relatório técnico final (versão pública/sanitizada)
+│   └── apresentacoes/      # Apresentação da banca e treinamento da equipe
 ├── playbooks/
 │   ├── ddos/
-│   │   ├── Playbook_DDoS.md
-│   │   └── templates/
-│   │       └── notificacao_cliente_ddos.txt
-│   └── exploracao_varredura/
-│       ├── Playbook_Varredura.md
-│       └── templates/
-│           └── notificacao_varredura.txt
-└── templates/
-    ├── cadeia_de_custodia.md
-    └── relatorio_pos_incidente.md
+│   └── exploracao-varredura/
+├── plano-resposta-incidentes/
+├── templates-comunicacao/
+├── matriz-risco/
+├── treinamento/
+└── SANITIZACAO.md          # Checklist antes de publicar
 ```
 
----
+## Aviso
 
-## 📘 Resumo dos Documentos
+Este repositório contém material derivado de um trabalho realizado para uma instituição real. Consulte [`SANITIZACAO.md`](SANITIZACAO.md) antes de qualquer publicação.
 
-- **[Plano de Resposta a Incidentes](docs/planos/Plano_de_Resposta_a_Incidentes.md):** Diretrizes de governança, papéis, responsabilidades e ciclo de vida NIST SP 800-61r3 / ISO 27035.
-- **[Playbook de Resposta a DDoS](playbooks/ddos/Playbook_DDoS.md):** Procedimentos operacionais padrão para contenção e mitigação de ataques volumétricos e direcionados à infraestrutura de roteamento do PoP-BA.
-- **[Playbook de Exploração e Varredura](playbooks/exploracao_varredura/Playbook_Varredura.md):** Triagem, classificação de severidade e resposta para varreduras de rede e tentativas de exploração.
-- **[Cadeia de Custódia Forense](templates/cadeia_de_custodia.md):** Formulário padronizado para preservação e integridade de evidências digitais.
-- **[Relatório Pós-Incidente](templates/relatorio_pos_incidente.md):** Modelo de documentação de lições aprendidas e análise pós-evento.
+## Licença
 
----
-
-**Autor:** Marco Aurélio da Silva da Cruz  
-**Instituição:** Ponto de Presença da RNP na Bahia (PoP-BA) / Programa Hackers do Bem  
+Defina a licença após autorização da RNP/PoP-BA e do programa Hackers do Bem (sugestão para documentação: CC BY 4.0).
